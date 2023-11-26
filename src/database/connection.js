@@ -1,11 +1,12 @@
 import sql from 'mssql';
+import { config } from "../config";
 
 const dbSettings = 
 {
-    user: 'denzel',
-    password: '012345',
-    server : 'localhost',
-    database: 'Consultados',
+   user: config.dbUser,
+   password: config.dbPassword,
+   server: config.dbServer,
+   database: config.dbDatabase,
     options: 
     {
         encrypt: true,
@@ -13,7 +14,7 @@ const dbSettings =
     }
 };
 
-async function getConnection()
+export async function getConnection()
 {
     try {
         const pool = await sql.connect(dbSettings);
@@ -21,6 +22,6 @@ async function getConnection()
     } catch (error) {
         console.error(error);
     }
-}
+};
 
-getConnection();
+export {sql};

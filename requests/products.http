@@ -1,0 +1,40 @@
+
+@api = http://localhost:3000/patient
+
+GET {{api}}
+
+### registrarNuevoProducto
+
+POST {{api}}
+Content-Type: application/json
+
+{
+    "id": "10",
+    "name": "XXXXXY",
+    "age": "98",
+    "address": "CalleTest",
+    "condition": "Nose2"
+}
+
+### productoPorId
+
+GET {{api}}/10
+
+### eliminarNuevoProducto
+
+DELETE {{api}}/8
+
+### cantidad total de productos
+
+GET {{api}}/count
+
+### update a product
+PUT {{api}}/10
+Content-Type: application/json
+
+{
+    "name" : "Juan Carlos Bodoque",
+    "age" : "35",
+    "address" : "Calle 31 Minutos",
+    "condition" : "Marionetizado"
+}
