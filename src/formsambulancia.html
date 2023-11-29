@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Clinica Los Olivos</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #24862c;
+        }
+
+        h1.title,
+        h2.subtitle {
+            color: #06ce49;
+            text-align: center;
+        }
+
+        input.input,
+        button.button.is-primary {
+            background-color: #60d36f;
+            color: #000000;
+        }
+
+        .box {
+            background-color: #6d6b6b;
+            margin: 2rem auto;
+            max-width: 400px;
+            padding: 2rem;
+        }
+
+        button.button.is-meidum {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 class="title is-1">🏥 Formulario Pacientes</h1>
+        <h2 class="subtitle is-3">Por favor ingresa tus datos</h2>
+    </div>
+    <div class="box my-6">
+        <div class="field">
+            <label class="label" for="firstName">Nombre:</label>
+            <div class="control">
+                <input class="input" id="firstName">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="lastName">Apellido:</label>
+            <div class="control">
+                <input class="input" id="lastName">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="phone">Telefono:</label>
+            <div class="control">
+                <input class="input" type="text" id="phone" placeholder="Ej: +591 739-88784">
+            </div>
+        </div>
+        <div class="block">
+            <button class="button is-primary is-medium is-fullwidth mt-6" onclick="submitForm()">Enviar</button>
+        </div>
+    </div>
+    <script>
+        function submitForm() {
+            // Obtener valores de los campos
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var phone = document.getElementById('phone').value;
+
+            // Crear objeto con los datos del paciente
+            var patientData = {
+                firstName: firstName,
+                lastName: lastName,
+                phone: phone
+            };
+
+            // Mostrar los datos en la consola (esto es solo para propósitos de demostración)
+            console.log(JSON.stringify(patientData));
+
+            // Puedes enviar estos datos al servidor utilizando fetch o cualquier otra técnica de tu elección.
+        }
+    </script>
+</body>
+</html>
