@@ -15,10 +15,10 @@ import quirofanoRoutes from "./routes/quirofano.routes";
 
 import HospitalRoutes from "./routes/Hospital.routes";
 
-const app = express()
+const app = express();
 
 //settings
-app.set('port', config.port)
+app.set('port', config.port);
 
 //middlewares
 app.use(express.json());
@@ -36,6 +36,6 @@ app.use(ambulanciaRoutes)
 
 app.use(quirofanoRoutes)
 
-app.use(HospitalRoutes)
+app.use(HospitalRoutes);
 
 export default app
