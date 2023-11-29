@@ -16,10 +16,12 @@ const dbSettings =
 
 export async function getConnection()
 {
-    try {
+    try 
+    {
         const pool = await sql.connect(dbSettings);
         return pool;
-    } catch (error) {
+    } catch (error) 
+    {
         console.error(error);
     }
 };

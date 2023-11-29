@@ -1,0 +1,38 @@
+@api = http://localhost:3000/ambulancias
+
+### registrarNuevaAmbulancia
+
+POST {{api}}
+Content-Type: application/json
+
+{
+    "id_ambulancia": 10,
+    "id_patient": 1,
+    "id_enfermero": 1,
+    "direccion": "direccionTest",
+    "hospital": "hospitalTest"
+}
+
+### ambulanciaPorId
+
+GET {{api}}/10
+
+### eliminarNuevaAmbulancia
+
+DELETE {{api}}/8
+
+### cantidad total de ambulancias
+
+GET {{api}}/count
+
+### actualizar ambulancia
+
+PUT {{api}}/10
+Content-Type: application/json
+
+{
+    "id_patient": 2,
+    "id_enfermero": 3,
+    "direccion": "direccionTest1",
+    "hospital": "hospitalTest1"
+}

@@ -1,0 +1,35 @@
+@api = http://localhost:3000/hospitals
+
+### Obtener todos los hospitales
+GET {{api}}/hospitals
+
+### Crear un nuevo hospital
+POST {{api}}/hospitals
+Content-Type: application/json
+
+{
+  "nombre": "Nombre del Hospital",
+  "direccion": "Dirección del Hospital",
+  "telefono": "Número de teléfono del Hospital",
+  "camas_disponibles": 100
+}
+
+### Obtener un hospital por ID
+GET {{api}}/hospitals/1
+
+### Eliminar un hospital por ID
+DELETE {{api}}/hospitals/1
+
+### Obtener la cantidad total de hospitales
+GET {{api}}/hospitals/count
+
+### Actualizar información de un hospital por ID
+PUT {{api}}/hospitals/1
+Content-Type: application/json
+
+{
+  "nombre": "Nuevo Nombre del Hospital",
+  "direccion": "Nueva Dirección del Hospital",
+  "telefono": "Nuevo Número de teléfono del Hospital",
+  "camas_disponibles": 120
+}

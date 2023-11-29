@@ -1,0 +1,40 @@
+
+@api = http://localhost:3000/doctors
+
+GET {{api}}
+
+### registrarNuevoProducto
+
+POST {{api}}
+Content-Type: application/json
+
+{
+    "id_consulta": "10",
+    "id_patient": "01",
+    "id_doctor": "01",
+    "n_consultorio": "consultorioTest",
+    "patient_condition": "Nose2",
+}
+
+### productoPorId
+
+GET {{api}}/10
+
+### eliminarNuevoProducto
+
+DELETE {{api}}/8
+
+### cantidad total de productos
+
+GET {{api}}/count
+
+### update a product
+PUT {{api}}/10
+Content-Type: application/json
+
+{
+    "id_patient": "02",
+    "id_doctor": "03",
+    "n_consultorio": "consultorioTest1",
+    "patient_condition": "Nose3",
+}

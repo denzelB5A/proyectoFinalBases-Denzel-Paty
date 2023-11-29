@@ -1,0 +1,47 @@
+@api = http://localhost:3000/doctors
+
+GET {{api}}
+
+### registrarNuevoProducto
+
+POST {{api}}
+Content-Type: application/json
+
+{
+    "id_consulta": "10",
+    "id_patient": "01",
+    "id_doctor": "01",
+    "n_quirofano": "consultorioTest",
+    "fecha_hora": "2023-11-28 14:30:00",
+    "patient_condition": "Nose2",
+    "nombre" : "nombre1",
+    "edad": "35",
+    "correoElectronico": "correo1@gmail.com"
+}
+
+### productoPorId
+
+GET {{api}}/10
+
+### eliminarNuevoProducto
+
+DELETE {{api}}/8
+
+### cantidad total de productos
+
+GET {{api}}/count
+
+### update a product
+PUT {{api}}/10
+Content-Type: application/json
+
+{
+    "id_patient": "02",
+    "id_doctor": "02",
+    "n_quirofano": "consultorioTest1",
+    "fecha_hora": "2023-11-15 18:45:00",
+    "patient_condition": "Nose5",
+    "nombre" : "nombre1",
+    "edad": "35",
+    "correoElectronico": "correo1@gmail.com"
+}
